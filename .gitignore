@@ -31,5 +31,3 @@ coverage/
 build/
 out/
 
-src/*
-!src/.gitkeep
