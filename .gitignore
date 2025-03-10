@@ -1,0 +1,35 @@
+# Node.js
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+npm-debug.log*
+
+# Vite
+dist/
+.cache/
+.temp/
+coverage/
+
+# IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment Variables
+.env*
+!.env.example
+
+# macOS
+.DS_Store
+
+# Build output
+build/
+out/
+
+src/*
+!src/.gitkeep
