@@ -65,8 +65,8 @@ export const CreateChallengeForm: React.FC<CreateChallengeFormProps> = ({ onSucc
     const challengeData: CommunityChallengeRequest = {
       title,
       description,
-      startDate: new Date(startDate).toISOString(), 
-      endDate: new Date(endDate).toISOString()
+      startDate: new Date(startDate).toISOString(),
+      endDate: new Date(endDate).toISOString(),
       reward,
       targetGoal,
       imageUrl,
