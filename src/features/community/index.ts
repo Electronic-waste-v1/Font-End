@@ -1,0 +1,1 @@
+export { default as CommunityPage } from "./pages/CommunityPage"
