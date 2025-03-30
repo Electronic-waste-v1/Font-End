@@ -19,7 +19,7 @@ import {
   useSearchCollectionPointsByLocationQuery,
   useFilterCollectionPointsByDeviceTypeQuery,
 } from "@/shared/services/collectionApi"
-import type { CollectionPointResponse } from "@/shared/types/collectionPointTypes"
+
 import { useToast } from "@/shared/components/ui/use-toast"
 import { Skeleton } from "@/shared/components/ui/skeleton"
 
@@ -31,7 +31,7 @@ export default function CollectionPointsPage() {
   const [searchTerm, setSearchTerm] = useState("")
   const [acceptedItemFilter, setAcceptedItemFilter] = useState<string>("all")
   const [page, setPage] = useState(0)
-  const [pageSize, setPageSize] = useState(6)
+  const [pageSize] = useState(6)
   const { toast } = useToast()
 
 

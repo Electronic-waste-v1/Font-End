@@ -1,13 +1,24 @@
-FROM node:18.18-alpine3.18 as build
+
+FROM node:18.18-alpine3.18 as builder
 WORKDIR /app
+
+
 COPY package.json package-lock.json ./
-RUN npm install
+RUN npm ci --production=false --silent
+
+
 COPY . .
 RUN npm run build
 
 
-FROM node:18.18-alpine3.18 
+FROM node:18.18-alpine3.18 as production
 WORKDIR /app
-COPY --from=build /app .
+
+RUN npm install -g serve
+
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/package.json ./
+RUN npm ci --production --silent
+
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["serve", "-s", "dist", "-l", "3000"]
