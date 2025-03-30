@@ -2,7 +2,7 @@
 
 import React from "react"
 
-// This file is based on the shadcn/ui toast component hook implementation
+
 import type { ToastActionElement, ToastProps } from "@/shared/components/ui/toast"
 
 const TOAST_LIMIT = 5
@@ -71,7 +71,7 @@ const reducer = (state: State, action: Action): State => {
     case actionTypes.DISMISS_TOAST: {
       const { toastId } = action
 
-      // ! Side effects
+    
       if (toastId) {
         if (toastTimeouts.has(toastId)) {
           clearTimeout(toastTimeouts.get(toastId))
