@@ -5,7 +5,7 @@ COPY package.json package-lock.json ./
 RUN npm ci --production=false --silent
 
 COPY . .
-RUN npm run build
+
 
 FROM node:18.18-alpine3.18 as production
 WORKDIR /app
