@@ -9,7 +9,7 @@ import { Badge } from "@/shared/components/ui/badge"
 import AnnouncementPreview from "../components/AnnouncementPreview"
 import NewsletterSignup from "../components/NewsletterSignup"
 
-// Sample announcements data (same as in AnnouncementsPage)
+
 const announcements = [
   {
     id: "1",
@@ -93,10 +93,10 @@ const announcements = [
     author: "EcoRecycle Team",
     tags: ["recycling center", "grand opening", "e-waste", "downtown"],
   },
-  // Add more detailed announcements as needed
+
 ]
 
-// Sample related announcements
+
 const relatedAnnouncements = [
   {
     id: "3",
@@ -127,10 +127,9 @@ const relatedAnnouncements = [
 export default function AnnouncementDetailPage() {
   const { id } = useParams<{ id: string }>()
 
-  // Find the announcement with the matching ID
   const announcement = announcements.find((a) => a.id === id)
 
-  // If no announcement is found, show a not found message
+
   if (!announcement) {
     return (
       <div className="min-h-screen flex flex-col">
