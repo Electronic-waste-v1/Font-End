@@ -32,9 +32,7 @@ jobs:
         run: npm install --prefer-offline --no-audit --progress=false
       
     
-        
-      - name: Build React app
-        run: npm run build
+      
       
       - name: Login to Docker Hub
         uses: docker/login-action@v2
